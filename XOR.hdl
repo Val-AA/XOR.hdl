@@ -1,0 +1,15 @@
+CHIP XOR {
+	IN a, b;
+	OUT out;
+
+	PARTS:
+	//Put your code here:
+	NOT(a=a, out=na);
+	AND(a=na, b=b, out=n);
+
+	NOT(a=b, out=nb);
+	AND(a=a, b=nb, out=f);
+
+	OR(a=n, b=f, out=out);
+
+}
